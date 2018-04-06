@@ -1,4 +1,4 @@
-package response;
+package Responses;
 
 public abstract class ResponseData {
 

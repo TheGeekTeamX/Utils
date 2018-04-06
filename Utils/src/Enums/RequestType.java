@@ -1,10 +1,18 @@
 package Enums;
 
 public enum RequestType {
-	DataRequest,
-	DataEditing,
-	OpenEvent,
-	RecordSending,
-	ProtocolRequest,			
-
+	CreateUserRequest,
+	LoginRequest,
+	ChangePasswordRequest,
+	EditUserRequest,
+	FriendsListRequest,
+	EditFriendsListRequest,
+	AddFriendRequest,
+	ProfilePictureRequest,
+	UpdateProfilePictureRequest,
+	CreateEventRequest,
+	CloseEventRequest,
+	EventsListRequest,
+	EventProtocolRequest,//TODO
+	
 }

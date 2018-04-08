@@ -4,16 +4,16 @@ import java.util.LinkedList;
 
 import Enums.RequestType;
 
-public class EditFriendsListRequestData extends RequestData {
+public class EditContactsListRequestData extends RequestData {
 	private LinkedList <String> updatedFriendsList;
 
-	public EditFriendsListRequestData(String userEmail, LinkedList<String> updatedFriendsList) {
-		super(RequestType.EditFriendsListRequest, userEmail);
+	public EditContactsListRequestData(String userEmail, LinkedList<String> updatedFriendsList) {
+		super(RequestType.EditContactsListRequest, userEmail);
 		this.updatedFriendsList = updatedFriendsList;
 	}
 	
-	public EditFriendsListRequestData(String userEmail) {
-		super(RequestType.EditFriendsListRequest, userEmail);
+	public EditContactsListRequestData(String userEmail) {
+		super(RequestType.EditContactsListRequest, userEmail);
 		// TODO Auto-generated constructor stub
 		this.updatedFriendsList = new LinkedList<>();
 	}

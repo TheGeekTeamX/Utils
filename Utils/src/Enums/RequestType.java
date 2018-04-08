@@ -5,14 +5,14 @@ public enum RequestType {
 	LoginRequest,
 	ChangePasswordRequest,
 	EditUserRequest,
-	FriendsListRequest,
-	EditFriendsListRequest,
+	ContactsListRequest,
+	EditContactsListRequest,
 	AddFriendRequest,
 	ProfilePictureRequest,
 	UpdateProfilePictureRequest,
 	CreateEventRequest,
 	CloseEventRequest,
 	EventsListRequest,
-	EventProtocolRequest,//TODO
+	EventProtocolRequest,
 	
 }

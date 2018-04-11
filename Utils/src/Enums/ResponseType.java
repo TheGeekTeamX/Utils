@@ -3,5 +3,7 @@ package Enums;
 public enum ResponseType {
 	Error,
 	AddFriendResponse,
-	Edit
+	Edit,
+	Contacts,
+	Events
 }

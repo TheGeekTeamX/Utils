@@ -1,21 +1,22 @@
 package Responses;
 
+import Enums.ErrorType;
 import Enums.ResponseType;
 
 public class ErrorResponse extends ResponseData{
-	private String description;
+	private ErrorType errorType;
 
-	public String getDescription() {
-		return description;
+	public ErrorType getErrorType() {
+		return errorType;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setErrorType(ErrorType errorType) {
+		this.errorType = errorType;
 	}
 
-	public ErrorResponse(String description) {
+	public ErrorResponse(ErrorType errorType) {
 		super(ResponseType.Error);
-		this.description = description;
+		this.errorType = errorType;
 	}
 	
 	

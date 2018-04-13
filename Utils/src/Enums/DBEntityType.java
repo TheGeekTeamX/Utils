@@ -5,6 +5,7 @@ public enum DBEntityType {
 	UserEvent,
 	Event,
 	Contact,
-	Credential
+	Credential,
+	ProfilePicture
 
 }

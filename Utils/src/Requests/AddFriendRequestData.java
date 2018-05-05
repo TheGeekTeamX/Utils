@@ -11,11 +11,6 @@ public class AddFriendRequestData extends RequestData {
 		this.friendEmail = friendMail;
 	}
 
-	public AddFriendRequestData(String userEmail) {
-		super(RequestType.AddFriendRequest, userEmail);
-		// TODO Auto-generated constructor stub
-		this.friendEmail = "";
-	}
 
 	public String getFriendMail() {
 		return this.friendEmail;

@@ -10,13 +10,6 @@ public class CloseEventRequestData extends RequestData {
 		this.eventId = eventId;
 	}
 
-	
-	public CloseEventRequestData(String userEmail) {
-		super(RequestType.CloseEventRequest,userEmail);
-		// TODO Auto-generated constructor stub
-		this.eventId = -1;
-	}
-
 
 	public int getEventId() {
 		return this.eventId;

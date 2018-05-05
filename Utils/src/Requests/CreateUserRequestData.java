@@ -10,14 +10,7 @@ public class CreateUserRequestData extends RequestData {
 	private String country;
 	private String pictureUrl;
 
-	public CreateUserRequestData(String userEmail) {
-		super(RequestType.CreateUserRequest,userEmail);
-		this.fullName = "";
-		this.phoneNumber = "";
-		this.country = "";
-		this.pictureUrl = "";
-			
-	}
+
 
 	public CreateUserRequestData(String userEmail, String credential, String fullName, String phoneNumber,String country, String pictureUrl) {
 		super(RequestType.CreateUserRequest, userEmail);

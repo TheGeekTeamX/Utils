@@ -18,14 +18,7 @@ public class EditUserRequestData extends RequestData {
 		this.country = country;
 		this.pictureUrl = pictureUrl;
 	}
-	public EditUserRequestData(String userEmail) {
-		// TODO Auto-generated constructor stub
-		super(RequestType.EditUserRequest, userEmail);
-		this.fullName = "";
-		this.phoneNumber = "";
-		this.country = "";
-		this.pictureUrl = "";
-	}
+
 	public String getFullName() {
 		return this.fullName;
 	}

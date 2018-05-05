@@ -6,5 +6,6 @@ public enum ResponseType {
 	Edit,
 	Contacts,
 	Events,
-	PendingEvents
+	PendingEvents,
+	Boolean
 }

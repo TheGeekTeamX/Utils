@@ -14,7 +14,7 @@ public class BooleanResponseData extends ResponseData{
 	}
 
 	public BooleanResponseData(Boolean flag) {
-		super(ResponseType.Edit);
+		super(ResponseType.Boolean);
 		this.flag = flag;
 	}
 	

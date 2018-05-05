@@ -8,14 +8,6 @@ public class CreateEventRequestData extends RequestData {
     private String description;
     private String dateCreated;
 
-    public CreateEventRequestData(String userEmail){
-    	super(RequestType.CreateEventRequest,userEmail);
-        this.usersEmails = "";
-        this.title = "";
-        this.description = "";
-        this.dateCreated = "";
-    }
-
 	public CreateEventRequestData(String userEmail,  String usersEmails, String title, String description, String dateCreated) {
 		super(RequestType.CreateEventRequest, userEmail);
 		this.usersEmails = usersEmails;

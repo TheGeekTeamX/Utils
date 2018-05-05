@@ -6,10 +6,6 @@ public class UpdateProfilePictureRequestData extends RequestData {
 	private String newProfilePictureUrl;
 
 	
-	public UpdateProfilePictureRequestData(String userEmail) {
-		super(RequestType.UpdateProfilePictureRequest, userEmail);
-		// TODO Auto-generated constructor stub
-	}
 
 	public UpdateProfilePictureRequestData(String userEmail, String newProfilePictureUrl) {
 		super(RequestType.UpdateProfilePictureRequest, userEmail);

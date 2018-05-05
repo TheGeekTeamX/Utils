@@ -12,11 +12,6 @@ public class EditContactsListRequestData extends RequestData {
 		this.updatedFriendsList = updatedFriendsList;
 	}
 	
-	public EditContactsListRequestData(String userEmail) {
-		super(RequestType.EditContactsListRequest, userEmail);
-		// TODO Auto-generated constructor stub
-		this.updatedFriendsList = new LinkedList<>();
-	}
 	public LinkedList<String> getUpdatedFriendsList() {
 		return this.updatedFriendsList;
 	}

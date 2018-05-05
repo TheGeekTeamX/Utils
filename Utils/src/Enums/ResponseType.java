@@ -5,5 +5,6 @@ public enum ResponseType {
 	AddFriendResponse,
 	Edit,
 	Contacts,
-	Events
+	Events,
+	PendingEvents
 }

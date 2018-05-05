@@ -3,7 +3,7 @@ package Responses;
 import Enums.ErrorType;
 import Enums.ResponseType;
 
-public class ErrorResponse extends ResponseData{
+public class ErrorResponseData extends ResponseData{
 	private ErrorType errorType;
 
 	public ErrorType getErrorType() {
@@ -14,7 +14,7 @@ public class ErrorResponse extends ResponseData{
 		this.errorType = errorType;
 	}
 
-	public ErrorResponse(ErrorType errorType) {
+	public ErrorResponseData(ErrorType errorType) {
 		super(ResponseType.Error);
 		this.errorType = errorType;
 	}

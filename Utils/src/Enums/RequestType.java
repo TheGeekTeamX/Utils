@@ -2,7 +2,6 @@ package Enums;
 
 public enum RequestType {
 	CreateUserRequest,
-	LoginRequest,
 	ChangePasswordRequest,
 	EditUserRequest,
 	ContactsListRequest,
@@ -12,7 +11,11 @@ public enum RequestType {
 	UpdateProfilePictureRequest,
 	CreateEventRequest,
 	CloseEventRequest,
+	LeaveEvent,
+	JoinEvent,
 	EventsListRequest,
 	EventProtocolRequest,
+	PendingEventsRequest,
+	LoginRequest
 	
 }

@@ -10,6 +10,8 @@ public enum ErrorType {
 	BothPasswordsEquals,
 	BothUsersEquals,
 	UserHasNoEvents,
-	UserHasNoProfilePicture
-
+	UserHasNoProfilePicture,
+	NoPendingEvents,
+	ConnectionIsAlreadyEstablished,
+	UserMustToLogin
 }

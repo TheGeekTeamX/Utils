@@ -4,6 +4,7 @@ public enum ErrorType {
 	TechnicalError,
 	UserIsNotExist,
 	FriendIsNotExist,
+	AlreadyFriends,
 	IncorrectCredentials,
 	EmailAlreadyRegistered,
 	WrongPreviousPassword,

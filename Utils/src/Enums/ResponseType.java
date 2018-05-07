@@ -7,5 +7,6 @@ public enum ResponseType {
 	Contacts,
 	Events,
 	PendingEvents,
-	Boolean
+	Boolean,
+	Login
 }

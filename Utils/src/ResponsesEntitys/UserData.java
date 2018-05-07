@@ -1,22 +1,21 @@
 package ResponsesEntitys;
 
 public class UserData {
-	private String fullName;
+	private String firstName;
+	private String lastName;
 	private String email;
 	private String pictureURL;
-	
-	
-	public UserData(String fullName, String email, String pictureURL) {
-		super();
-		this.fullName = fullName;
-		this.email = email;
-		this.pictureURL = pictureURL;
+	public String getFirstName() {
+		return firstName;
 	}
-	public String getFullName() {
-		return fullName;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
-	public void setFullName(String fullName) {
-		this.fullName = fullName;
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 	public String getEmail() {
 		return email;
@@ -30,6 +29,16 @@ public class UserData {
 	public void setPictureURL(String pictureURL) {
 		this.pictureURL = pictureURL;
 	}
+	public UserData(String firstName, String lastName, String email, String pictureURL) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.pictureURL = pictureURL;
+	}
+	
+	
+
 	
 
 }

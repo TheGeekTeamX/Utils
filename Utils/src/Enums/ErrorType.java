@@ -3,6 +3,7 @@ package Enums;
 public enum ErrorType {
 	TechnicalError,
 	UserIsNotExist,
+	EventIsNotExist,
 	FriendIsNotExist,
 	AlreadyFriends,
 	IncorrectCredentials,
@@ -14,5 +15,6 @@ public enum ErrorType {
 	UserHasNoProfilePicture,
 	NoPendingEvents,
 	ConnectionIsAlreadyEstablished,
-	UserMustToLogin
+	UserMustToLogin,
+	UserIsNotAdmin
 }

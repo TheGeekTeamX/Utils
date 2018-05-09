@@ -2,26 +2,27 @@ package Notifications;
 
 import java.util.ArrayList;
 import Enums.NotificationType;
+import ResponsesEntitys.UserData;
 
 public class EventInvitationNotificationData extends EventNotificationData {
 
-	private ArrayList<String> participantsNames;
+	private ArrayList<UserData> participants;
 	private String title;
 	
-	public EventInvitationNotificationData(int eventId, ArrayList<String> participantsIds,	String title)
+	public EventInvitationNotificationData(int eventId, ArrayList<UserData> participants,	String title)
 	{
 		super(NotificationType.EventInvitation,eventId);
-		this.participantsNames = participantsIds;
+		this.participants = participants;
 		this.title = title;
 	}
 
 
-	public ArrayList<String> getParticipantsIds() {
-		return participantsNames;
+	public ArrayList<UserData> getParticipants() {
+		return participants;
 	}
 
-	public void setParticipantsIds(ArrayList<String> participantsIds) {
-		this.participantsNames = participantsIds;
+	public void setParticipants(ArrayList<UserData> participants) {
+		this.participants = participants;
 	}
 
 	public String getTitle() {

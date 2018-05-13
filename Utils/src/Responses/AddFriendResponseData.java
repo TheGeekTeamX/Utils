@@ -1,23 +1,19 @@
 package Responses;
 
+import Enums.RequestType;
 import Enums.ResponseType;
 import ResponsesEntitys.UserData;
 
-public class AddFriendResponseData extends ResponseData{
-	private UserData userData;
-
-	public UserData getUserData() {
-		return userData;
-	}
-
-	public void setUserData(UserData userData) {
-		this.userData = userData;
-	}
+public class AddFriendResponseData extends FriendResponseData{
 
 	public AddFriendResponseData(UserData userData) {
-		super(ResponseType.AddFriendResponse);
-		this.userData = userData;
+		super(ResponseType.AddFriendResponse, userData);
+		// TODO Auto-generated constructor stub
 	}
+
+
+
+
 	
 	
 

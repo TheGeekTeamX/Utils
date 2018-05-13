@@ -8,5 +8,7 @@ public enum ResponseType {
 	Events,
 	PendingEvents,
 	Boolean,
-	Login
+	Login,
+	ProfilePicture,
+	IsUserExistResponse
 }

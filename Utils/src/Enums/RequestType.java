@@ -16,6 +16,7 @@ public enum RequestType {
 	EventsListRequest,
 	EventProtocolRequest,
 	PendingEventsRequest,
-	LoginRequest
+	LoginRequest,
+	IsUserExistRequest
 	
 }

@@ -1,10 +1,21 @@
 package ResponsesEntitys;
 
-public class UserData {
+import java.io.Serializable;
+
+public class UserData implements Serializable{
 	private String firstName;
 	private String lastName;
 	private String email;
 	private String pictureURL;
+	private String phoneNumber;
+	
+	
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
 	public String getFirstName() {
 		return firstName;
 	}
@@ -29,14 +40,25 @@ public class UserData {
 	public void setPictureURL(String pictureURL) {
 		this.pictureURL = pictureURL;
 	}
-	public UserData(String firstName, String lastName, String email, String pictureURL) {
+	public UserData(String firstName, String lastName, String email, String pictureURL,String phoneNumber) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.pictureURL = pictureURL;
+		this.phoneNumber = phoneNumber;
 	}
 	
+    @Override
+    public String toString() {
+        return "Event{" +
+                "firstName=" + firstName +
+                ", lastName=" + lastName +
+                ", email='" + email + '\'' +
+                ", pictureURL='" + pictureURL + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                '}';
+    }
 	
 
 	

@@ -1,14 +1,16 @@
 package Requests;
 
+import java.util.List;
+
 import Enums.RequestType;
 
 public class CreateEventRequestData extends RequestData {
-    private String usersEmails;
+    private List<String> usersEmails;
     private String title;
     private String description;
     private String dateCreated;
 
-	public CreateEventRequestData(String userEmail,  String usersEmails, String title, String description, String dateCreated) {
+	public CreateEventRequestData(String userEmail,  List<String> usersEmails, String title, String description, String dateCreated) {
 		super(RequestType.CreateEventRequest, userEmail);
 		this.usersEmails = usersEmails;
 		this.title = title;
@@ -16,11 +18,11 @@ public class CreateEventRequestData extends RequestData {
 		this.dateCreated = dateCreated;
 	}
 
-	public String getUsersEmails() {
+	public List<String> getUsersEmails() {
 		return this.usersEmails;
 	}
 
-	public void setUsersEmails(String usersEmails) {
+	public void setUsersEmails(List<String> usersEmails) {
 		this.usersEmails = usersEmails;
 	}
 

@@ -1,5 +1,6 @@
 package Requests;
 
+import java.sql.Date;
 import java.util.List;
 
 import Enums.RequestType;
@@ -8,9 +9,9 @@ public class CreateEventRequestData extends RequestData {
     private List<String> usersEmails;
     private String title;
     private String description;
-    private String dateCreated;
+    private Date dateCreated;
 
-	public CreateEventRequestData(String userEmail,  List<String> usersEmails, String title, String description, String dateCreated) {
+	public CreateEventRequestData(String userEmail,  List<String> usersEmails, String title, String description, Date dateCreated) {
 		super(RequestType.CreateEventRequest, userEmail);
 		this.usersEmails = usersEmails;
 		this.title = title;
@@ -42,11 +43,11 @@ public class CreateEventRequestData extends RequestData {
 		this.description = description;
 	}
 
-	public String getDateCreated() {
+	public Date getDateCreated() {
 		return this.dateCreated;
 	}
 
-	public void setDateCreated(String dateCreated) {
+	public void setDateCreated(Date dateCreated) {
 		this.dateCreated = dateCreated;
 	}
     

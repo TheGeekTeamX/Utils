@@ -1,6 +1,5 @@
 package Responses;
 
-import java.io.File;
 
 import Enums.ResponseType;
 

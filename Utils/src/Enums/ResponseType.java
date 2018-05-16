@@ -10,5 +10,6 @@ public enum ResponseType {
 	Boolean,
 	Login,
 	ProfilePicture,
-	IsUserExistResponse
+	IsUserExistResponse,
+	EventProtocolResponse
 }

@@ -32,7 +32,7 @@ public class BytesHandler {
 		InputStream in = new ByteArrayInputStream(byteArr);
 		try {
 			BufferedImage bi = ImageIO.read(in);
-			return ImageIO.write(bi, "jpg", new File(".//src//test.jpg"));
+			return ImageIO.write(bi, "jpg", new File(dest));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -9,14 +9,12 @@ public class CreateEventRequestData extends RequestData {
     private List<String> usersEmails;
     private String title;
     private String description;
-    private Date dateCreated;
 
-	public CreateEventRequestData(String userEmail,  List<String> usersEmails, String title, String description, Date dateCreated) {
+	public CreateEventRequestData(String userEmail,  List<String> usersEmails, String title, String description) {
 		super(RequestType.CreateEventRequest, userEmail);
 		this.usersEmails = usersEmails;
 		this.title = title;
 		this.description = description;
-		this.dateCreated = dateCreated;
 	}
 
 	public List<String> getUsersEmails() {
@@ -43,13 +41,7 @@ public class CreateEventRequestData extends RequestData {
 		this.description = description;
 	}
 
-	public Date getDateCreated() {
-		return this.dateCreated;
-	}
 
-	public void setDateCreated(Date dateCreated) {
-		this.dateCreated = dateCreated;
-	}
     
     
 }

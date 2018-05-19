@@ -1,11 +1,11 @@
 package UpdateObjects;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class EventInvite {
 	private int id;
 	private String title;
-	private ArrayList<String> participants;
+	private List<String> participants;
 	public int getId() {
 		return id;
 	}
@@ -18,13 +18,13 @@ public class EventInvite {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public ArrayList<String> getParticipants() {
+	public List<String> getParticipants() {
 		return participants;
 	}
-	public void setParticipants(ArrayList<String> participants) {
+	public void setParticipants(List<String> participants) {
 		this.participants = participants;
 	}
-	public EventInvite(int id, String title, ArrayList<String> participants) {
+	public EventInvite(int id, String title, List<String> participants) {
 		super();
 		this.id = id;
 		this.title = title;

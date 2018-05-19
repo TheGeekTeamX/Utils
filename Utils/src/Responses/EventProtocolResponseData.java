@@ -1,22 +1,38 @@
 package Responses;
 
+import java.util.List;
+
 import Enums.ResponseType;
+import ResponsesEntitys.ProtocolLine;
 
 public class EventProtocolResponseData extends ResponseData {
-	private String[] fileBytes;
+	private int eventId;
+	private List<ProtocolLine> protocolLines;
 
-	public String[] getFileBytes() {
-		return fileBytes;
+	public List<ProtocolLine> getProtocolLines() {
+		return protocolLines;
 	}
 
-	public void setFileBytes(String[] fileBytes) {
-		this.fileBytes = fileBytes;
+	public void setProtocolLines(List<ProtocolLine> protocolLines) {
+		this.protocolLines = protocolLines;
 	}
 
-	public EventProtocolResponseData(String[] fileBytes) {
+	public int getEventId() {
+		return eventId;
+	}
+
+	public void setEventId(int eventId) {
+		this.eventId = eventId;
+	}
+
+	public EventProtocolResponseData(int eventId,List<ProtocolLine> protocolLines) {
 		super(ResponseType.EventProtocolResponse);
-		this.fileBytes = fileBytes;
+		this.eventId = eventId;
+		this.protocolLines = protocolLines;
 	}
+	
+	
+
 	
 	
 

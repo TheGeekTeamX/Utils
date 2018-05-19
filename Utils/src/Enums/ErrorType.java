@@ -16,5 +16,6 @@ public enum ErrorType {
 	NoPendingEvents,
 	ConnectionIsAlreadyEstablished,
 	UserMustToLogin,
-	UserIsNotAdmin
+	UserIsNotAdmin,
+	ProtocolIsNotExist
 }

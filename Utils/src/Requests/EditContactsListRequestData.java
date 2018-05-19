@@ -1,22 +1,22 @@
 package Requests;
 
-import java.util.LinkedList;
+import java.util.List;
 
 import Enums.RequestType;
 
 public class EditContactsListRequestData extends RequestData {
-	private LinkedList <String> updatedFriendsList;
+	private List <String> updatedFriendsList;
 
-	public EditContactsListRequestData(String userEmail, LinkedList<String> updatedFriendsList) {
+	public EditContactsListRequestData(String userEmail, List<String> updatedFriendsList) {
 		super(RequestType.EditContactsListRequest, userEmail);
 		this.updatedFriendsList = updatedFriendsList;
 	}
 	
-	public LinkedList<String> getUpdatedFriendsList() {
+	public List<String> getUpdatedFriendsList() {
 		return this.updatedFriendsList;
 	}
 
-	public void setUpdatedFriendsList(LinkedList<String> updatedFriendsList) {
+	public void setUpdatedFriendsList(List<String> updatedFriendsList) {
 		this.updatedFriendsList = updatedFriendsList;
 	}
 

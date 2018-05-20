@@ -13,6 +13,7 @@ public enum RequestType {
 	CloseEventRequest,
 	LeaveEvent,
 	JoinEvent,
+	DeclineEvent,
 	EventsListRequest,
 	EventProtocolRequest,
 	LoginRequest,

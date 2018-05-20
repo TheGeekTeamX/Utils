@@ -1,15 +1,13 @@
 package ResponsesEntitys;
 
 import java.io.Serializable;
-import java.sql.Date;
-import java.util.LinkedList;
 import java.util.List;
 
 public class EventData implements Serializable{
 	
 	private int id;
 	private String title;
-	private Date dateCreated;
+	private String dateCreated;
 	private List<UserData> participants;
 	private String recordURL;
 	private String adminMail;
@@ -60,13 +58,14 @@ public class EventData implements Serializable{
 	public void setParticipants(List<UserData> participants) {
 		this.participants = participants;
 	}
-	public Date getDateCreated() {
+	public String getDateCreated() {
 		return dateCreated;
 	}
-	public void setDateCreated(Date dateCreated) {
+	public void setDateCreated(String dateCreated) {
 		this.dateCreated = dateCreated;
 	}
-	public EventData(int id, String title, Date dateCreated, List<UserData> participants, String recordURL,
+
+	public EventData(int id, String title, String dateCreated, List<UserData> participants, String recordURL,
 			String adminMail, String description, boolean isRecording) {
 		super();
 		this.id = id;

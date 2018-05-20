@@ -38,14 +38,14 @@ public class BytesHandler {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			return null;
+			return new byte[0];
 		}
 
 	}
 	
-	public static Boolean SaveByteArrayInDestinationAsImage(byte[] byteArr,String format,String dest)
+	public static Boolean SaveByteArrayInDestinationAsImage(byte[] arr,String format,String dest)
 	{
-		InputStream in = new ByteArrayInputStream(byteArr);
+		InputStream in = new ByteArrayInputStream(arr);
 		try {
 			BufferedImage bi = ImageIO.read(in);
 			return ImageIO.write(bi, format, new File(dest));

@@ -11,6 +11,9 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -108,26 +111,22 @@ public class BytesHandler {
 		
 	}
 
-	public static byte[] FromAudioToByteArray(String path) {
-		FileInputStream fis;
-		ByteArrayOutputStream out = new ByteArrayOutputStream();
+	public static String FromWavToString(String path) {
 		try {
-			fis = new FileInputStream(path);
-			InputStream fileIn = new BufferedInputStream(fis);
-			AudioInputStream audioIn = AudioSystem.getAudioInputStream(fileIn);
-			AudioSystem.write(audioIn, AudioFileFormat.Type.WAVE, out);
-			return out.toByteArray();
-
-		} catch (UnsupportedAudioFileException | IOException e) {
-			// TODO Auto-generated catch block
+			Path fileLocation = Paths.get(path);
+			byte[] data = Files.readAllBytes(fileLocation);
+			AudioInputStream audioIn = AudioSystem.getAudioInputStream(new ByteArrayInputStream(data));
+			AudioInputStream ais = new AudioInputStream(audioIn, audioIn.getFormat(), audioIn.getFrameLength());
+			ByteArrayOutputStream out = new ByteArrayOutputStream();
+			AudioSystem.write(ais, AudioFileFormat.Type.WAVE, out);
+			byte[] audioBytes = out.toByteArray();
+			String splittedWav = Base64.encodeBase64String(audioBytes);
+			out.close();
+			return splittedWav;
+		}  catch (Exception e) {
 			e.printStackTrace();
-			return null;
 		}
+		return null;
 	}
-	
-	public static String ConvertByteArrayToString(byte[] byteArray) {
-		return Base64.encodeBase64String(byteArray);
-		}
-	
 	
 }

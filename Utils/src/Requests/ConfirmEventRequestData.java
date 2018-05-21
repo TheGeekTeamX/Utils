@@ -2,7 +2,7 @@ package Requests;
 
 import Enums.RequestType;
 
-public class JoinEventRequestData extends RequestData {
+public class ConfirmEventRequestData extends RequestData {
 
 	private int eventId;
 	
@@ -14,8 +14,8 @@ public class JoinEventRequestData extends RequestData {
 		this.eventId = eventId;
 	}
 
-	public JoinEventRequestData(String userEmail, int eventId) {
-		super(RequestType.JoinEvent, userEmail);
+	public ConfirmEventRequestData(String userEmail, int eventId) {
+		super(RequestType.ConfirmEvent, userEmail);
 		this.eventId = eventId;
 	}
 

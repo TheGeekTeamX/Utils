@@ -4,9 +4,9 @@ import Enums.RequestType;
 
 public class CloseEventRequestData extends RequestData {
 	private int eventId;
-	private String[] recordsBytes;
+	private byte[] recordsBytes;
 
-	public CloseEventRequestData(String userEmail, int eventId,String[] recordsBytes) {
+	public CloseEventRequestData(String userEmail, int eventId,byte[] recordsBytes) {
 		super(RequestType.CloseEventRequest, userEmail);
 		this.eventId = eventId;
 		this.recordsBytes=recordsBytes;
@@ -22,12 +22,12 @@ public class CloseEventRequestData extends RequestData {
 	}
 
 
-	public String[] getRecordsBytes() {
+	public byte[] getRecordsBytes() {
 		return recordsBytes;
 	}
 
 
-	public void setRecordsBytes(String[] recordsBytes) {
+	public void setRecordsBytes(byte[] recordsBytes) {
 		this.recordsBytes = recordsBytes;
 	}
 	

@@ -1,25 +1,26 @@
 package Notifications;
 
 import Enums.NotificationType;
+import ResponsesEntitys.EventData;
 
 public class EventNotificationData extends NotificationData {
 
-	private int eventId;
+	private EventData eventData;
 	
 	
-	public int getEventId() {
-		return eventId;
+	public EventData getEventData() {
+		return eventData;
 	}
 
 
-	public void setEventId(int eventId) {
-		this.eventId = eventId;
+	public void setEventData(EventData eventData) {
+		this.eventData = eventData;
 	}
 
-	public EventNotificationData(NotificationType notificationType,int eventId) {
+	public EventNotificationData(NotificationType notificationType,EventData eventData) {
 		super(notificationType);
 		// TODO Auto-generated constructor stub
-		this.eventId = eventId;
+		this.eventData = eventData;
 	}
 
 }

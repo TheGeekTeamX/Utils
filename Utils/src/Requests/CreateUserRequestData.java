@@ -9,16 +9,16 @@ public class CreateUserRequestData extends RequestData {
 	private String lastName;
 	private String phoneNumber;
 	private String country;
-	private String pictureUrl;
+	private byte[] imageBytes;
 	
-	public CreateUserRequestData(String userEmail, String credential, String firstName,String lastName, String phoneNumber, String country, String pictureUrl) {
+	public CreateUserRequestData(String userEmail, String credential, String firstName,String lastName, String phoneNumber, String country, byte[] imageBytes) {
 		super(RequestType.CreateUserRequest, userEmail);
 		this.credential = credential;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.phoneNumber = phoneNumber;
 		this.country = country;
-		this.pictureUrl = pictureUrl;
+		this.imageBytes = imageBytes;
 	}
 
 	public String getCredential() {
@@ -61,12 +61,12 @@ public class CreateUserRequestData extends RequestData {
 		this.country = country;
 	}
 
-	public String getPictureUrl() {
-		return pictureUrl;
+	public byte[] getImageBytes() {
+		return imageBytes;
 	}
 
-	public void setPictureUrl(String pictureUrl) {
-		this.pictureUrl = pictureUrl;
+	public void setImageBytes(byte[] imageBytes) {
+		this.imageBytes = imageBytes;
 	}
 	
 	

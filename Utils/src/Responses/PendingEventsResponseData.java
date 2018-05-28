@@ -1,6 +1,5 @@
 package Responses;
 
-import java.util.LinkedList;
 import java.util.List;
 
 import Enums.ResponseType;

@@ -3,17 +3,17 @@ package Requests;
 import Enums.RequestType;
 
 public class UpdateProfilePictureRequestData extends RequestData {
-	private String profilePictureBytes;
+	private byte[] profilePictureBytes;
 
-	public String getProfilePictureBytes() {
+	public byte[] getProfilePictureBytes() {
 		return profilePictureBytes;
 	}
 
-	public void setProfilePictureBytes(String profilePictureBytes) {
+	public void setProfilePictureBytes(byte[] profilePictureBytes) {
 		this.profilePictureBytes = profilePictureBytes;
 	}
 
-	public UpdateProfilePictureRequestData(String userEmail, String profilePictureBytes) {
+	public UpdateProfilePictureRequestData(String userEmail, byte[] profilePictureBytes) {
 		super(RequestType.UpdateProfilePictureRequest, userEmail);
 		this.profilePictureBytes = profilePictureBytes;
 	}

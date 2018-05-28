@@ -1,9 +1,8 @@
 package ResponsesEntitys;
 
-import java.io.Serializable;
 import java.util.List;
 
-public class EventData implements Serializable{
+public class EventData {
 	
 	private int id;
 	private String title;
@@ -78,19 +77,7 @@ public class EventData implements Serializable{
 		this.isRecording = isRecording;
 	}
 	
-    @Override
-    public String toString() {
-        return "Event{" +
-                ", id=" + id +
-                ", title='" + title + '\'' +
-                ", dateCreated='" + dateCreated + '\'' +
-                ", users='" + participants.toString() + '\'' +
-                ", recordURL='" + recordURL + '\'' +
-                ", adminMail='" + adminMail + '\'' +
-                ", description='" + description + '\'' +
-                ", isRecording='" + isRecording + '\'' +
-                '}';
-    }
+
 
 	
 	

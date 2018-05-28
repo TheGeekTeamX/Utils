@@ -1,11 +1,12 @@
 package Notifications;
 
 import Enums.NotificationType;
+import ResponsesEntitys.EventData;
 
 public class EventCloseNotificationData extends EventNotificationData {
 
-	public EventCloseNotificationData(int eventId) {
-		super(NotificationType.EventClosed, eventId);
+	public EventCloseNotificationData(EventData eventData) {
+		super(NotificationType.EventClosed, eventData);
 		// TODO Auto-generated constructor stub
 	}
 

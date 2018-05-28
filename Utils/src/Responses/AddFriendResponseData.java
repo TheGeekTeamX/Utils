@@ -1,6 +1,5 @@
 package Responses;
 
-import Enums.RequestType;
 import Enums.ResponseType;
 import ResponsesEntitys.UserData;
 

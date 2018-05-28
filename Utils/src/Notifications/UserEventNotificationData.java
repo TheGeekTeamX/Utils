@@ -1,22 +1,24 @@
 package Notifications;
 
 import Enums.NotificationType;
+import ResponsesEntitys.EventData;
+import ResponsesEntitys.UserData;
 
 public class UserEventNotificationData extends EventNotificationData {
 
-	private int userId;
+	private UserData userData;
 
-	public int getUserId() {
-		return userId;
+	public UserData getUserData() {
+		return userData;
 	}
 
-	public void setUserId(int userId) {
-		this.userId = userId;
+	public void setUserData(UserData userData) {
+		this.userData = userData;
 	}
 
-	public UserEventNotificationData(NotificationType notificationType, int eventId, int userId) {
-		super(notificationType, eventId);
-		this.userId = userId;
+	public UserEventNotificationData(NotificationType notificationType, EventData eventData, UserData userData) {
+		super(notificationType, eventData);
+		this.userData = userData;
 	}
 
 

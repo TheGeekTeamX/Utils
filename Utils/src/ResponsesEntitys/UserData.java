@@ -1,8 +1,6 @@
 package ResponsesEntitys;
 
-import java.io.Serializable;
-
-public class UserData implements Serializable{
+public class UserData{
 	private String firstName;
 	private String lastName;
 	private String email;

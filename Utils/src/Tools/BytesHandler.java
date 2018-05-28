@@ -1,12 +1,10 @@
 package Tools;
 
 import java.awt.image.BufferedImage;
-import java.io.BufferedInputStream;
 import java.io.BufferedWriter;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -21,12 +19,10 @@ import javax.imageio.ImageIO;
 import javax.sound.sampled.AudioFileFormat;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.UnsupportedAudioFileException;
 
 import org.apache.commons.codec.binary.Base64;
 
 import ResponsesEntitys.ProtocolLine;
-import javafx.scene.shape.Line;
 
 public class BytesHandler {
 	
@@ -61,10 +57,10 @@ public class BytesHandler {
 	
 	public static ArrayList<ProtocolLine> fromTextFileToProtocol(String path)
 	{
+		Scanner sc = null;
 			try {
 				ArrayList<ProtocolLine> list = new ArrayList<>();
 				File file = new File(path);
-				Scanner sc;
 				sc = new Scanner(file);
 				sc.useDelimiter("\\,");
 				while(sc.hasNext())
@@ -76,11 +72,15 @@ public class BytesHandler {
 							list.add(new ProtocolLine(strArr[0],strArr[1]));
 						}
 					}
+				
 				return list;
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			} 
+			}
+			finally {
+				sc.close();
+			}
 		return null;
 	}
 	

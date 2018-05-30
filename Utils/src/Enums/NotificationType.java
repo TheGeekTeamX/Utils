@@ -4,6 +4,7 @@ public enum NotificationType {
 	EventInvitation,
 	UserJoinEvent,
 	UserLeaveEvent,
-	EventClosed
+	EventClosed,
+	ProtocolIsReady
 
 }

@@ -7,6 +7,7 @@ public enum DBEntityType {
 	Contact,
 	Credential,
 	ProfilePicture,
-	Protocol
+	Protocol,
+	DataSet
 
 }

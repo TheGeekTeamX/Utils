@@ -8,25 +8,33 @@ public class EventData {
 	private String title;
 	private String dateCreated;
 	private List<UserData> participants;
-	private String recordURL;
+	private Boolean isRecording;
+	private Boolean isConverted;
 	private String adminMail;
 	private String description;
-	private boolean isRecording;
 	
 	
 	
+	
+	public Boolean getIsRecording() {
+		return isRecording;
+	}
+	public void setIsRecording(Boolean isRecording) {
+		this.isRecording = isRecording;
+	}
+	public Boolean getIsConverted() {
+		return isConverted;
+	}
+	public void setIsConverted(Boolean isConverted) {
+		this.isConverted = isConverted;
+	}
 	public String getTitle() {
 		return title;
 	}
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public String getRecordURL() {
-		return recordURL;
-	}
-	public void setRecordURL(String recordURL) {
-		this.recordURL = recordURL;
-	}
+
 	public String getAdminMail() {
 		return adminMail;
 	}
@@ -38,12 +46,6 @@ public class EventData {
 	}
 	public void setDescription(String description) {
 		this.description = description;
-	}
-	public boolean isRecording() {
-		return isRecording;
-	}
-	public void setRecording(boolean isRecording) {
-		this.isRecording = isRecording;
 	}
 	public int getId() {
 		return id;
@@ -64,17 +66,17 @@ public class EventData {
 		this.dateCreated = dateCreated;
 	}
 
-	public EventData(int id, String title, String dateCreated, List<UserData> participants, String recordURL,
-			String adminMail, String description, boolean isRecording) {
+	public EventData(int id, String title, String dateCreated, List<UserData> participants,
+			String adminMail, String description, Boolean isRecording , Boolean isConverted) {
 		super();
 		this.id = id;
 		this.title = title;
 		this.dateCreated = dateCreated;
 		this.participants = participants;
-		this.recordURL = recordURL;
 		this.adminMail = adminMail;
 		this.description = description;
 		this.isRecording = isRecording;
+		this.isConverted = isConverted;
 	}
 	
 

@@ -26,9 +26,20 @@ import ResponsesEntitys.ProtocolLine;
 
 public class BytesHandler {
 	
-	public static byte[] FromImageToByteArray(String path,String format)
+	public  byte[] FromImageToByteArray(String path,String format)
 	{
 		try {
+		BufferedImage im = ImageIO.read(getClass().getResource(path));
+			ByteArrayOutputStream baos = new ByteArrayOutputStream();
+			ImageIO.write(im, "jpg", baos);
+			baos.flush();
+			return baos.toByteArray();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
+		/*try {
 			BufferedImage bi = ImageIO.read(new File(path));
 			ByteArrayOutputStream baos = new ByteArrayOutputStream();
 			ImageIO.write(bi, format, baos);
@@ -38,7 +49,7 @@ public class BytesHandler {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return new byte[0];
-		}
+		}*/
 
 	}
 	

@@ -12,5 +12,6 @@ public enum ResponseType {
 	ProfilePicture,
 	IsUserExistResponse,
 	EventProtocolResponse,
-	DataSetResponseData
+	DataSetResponseData,
+	CreateEvent
 }

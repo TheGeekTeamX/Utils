@@ -1,96 +1,25 @@
 package Responses;
 
 import Enums.ResponseType;
+import ResponsesEntitys.UserData;
 
 public class LoginResponseData extends ResponseData {
-	private int id;
-	private String firstName;
-	private String lastName;
-	private String phone;
-	private String pictureURL;
-	
-	
-	
-	public LoginResponseData(int id, String firstName, String lastName, String phone,String pictureURL) {
+	private UserData userData;
+
+	public UserData getUserData() {
+		return userData;
+	}
+
+	public void setUserData(UserData userData) {
+		this.userData = userData;
+	}
+
+	public LoginResponseData(UserData userData) {
 		super(ResponseType.Login);
-		this.id = id;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.phone = phone;
-		this.pictureURL = pictureURL;
+		this.userData = userData;
 	}
-
-
-
-
-	public String getPictureURL() {
-		return pictureURL;
-	}
-
-
-
-
-	public void setPictureURL(String pictureURL) {
-		this.pictureURL = pictureURL;
-	}
-
-
-
-
-	public int getId() {
-		return id;
-	}
-
-
-
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-
-
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-
-
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-
-
-
-	public String getLastName() {
-		return lastName;
-	}
-
-
-
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-
-
-
-	public String getPhone() {
-		return phone;
-	}
-
-
-
-
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-
-
+	
+	
 
 
 

@@ -5,7 +5,6 @@ public class UserData{
 	private String firstName;
 	private String lastName;
 	private String email;
-	private String pictureURL;
 	private String phoneNumber;
 	private float lengthOfRecord;
 	
@@ -47,19 +46,13 @@ public class UserData{
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getPictureURL() {
-		return pictureURL;
-	}
-	public void setPictureURL(String pictureURL) {
-		this.pictureURL = pictureURL;
-	}
-	public UserData(int id,String firstName, String lastName, String email, String pictureURL,String phoneNumber,float lengthOfRecord) {
+
+	public UserData(int id,String firstName, String lastName, String email,String phoneNumber,float lengthOfRecord) {
 		super();
 		this.userId = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
-		this.pictureURL = pictureURL;
 		this.phoneNumber = phoneNumber;
 		this.lengthOfRecord = lengthOfRecord;
 	}
@@ -70,7 +63,6 @@ public class UserData{
                 "firstName=" + firstName +
                 ", lastName=" + lastName +
                 ", email='" + email + '\'' +
-                ", pictureURL='" + pictureURL + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 '}';
     }

@@ -10,7 +10,6 @@ public enum RequestType {
 	ProfilePictureRequest,
 	UpdateProfilePictureRequest,
 	CreateEventRequest,
-	CloseEventRequest,
 	LeaveEvent,
 	ConfirmEvent,
 	DeclineEvent,
@@ -18,6 +17,5 @@ public enum RequestType {
 	EventProtocolRequest,
 	LoginRequest,
 	IsUserExistRequest,
-	DataSetRequest
 	
 }
